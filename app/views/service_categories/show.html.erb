@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<div class="label-field-pair">
+  <label for="title"><%= t('name') %>:</label>
+  <div class="text-input-bg"><%= @service_category.name %></div>
+</div>
+
+<%= link_to 'Edit', edit_service_category_path(@service_category) %> |
+<%= link_to 'Back', service_categories_path %>

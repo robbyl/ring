@@ -1,0 +1,25 @@
+<%= form_for @service_category, html: {multipart: true} do |f| %>
+  <% if @service_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_category.errors.count, "error") %> prohibited this service_category from being saved:</h2>
+
+      <ul>
+      <% @service_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="label-field-pair">
+      <label for="title"><%= t('name') %>:</label>
+      <div class="text-input-bg"><%= f.text_field :name %></div>
+    </div><div class="label-field-pair">
+      <label for="title"><%= t('image') %>:</label>
+      <div class="text-input-bg"><%= f.file_field :image %></div>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@service) do |f| %>
+  <% if @service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% @service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="label-field-pair">
+      <label for="title"><%= t('category') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.select :service_category_id, @service_categories.pluck(:name, :id), prompt: "#{t('select_category')}" %></div>
+    </div>
+    <div class="label-field-pair">
+      <label for="vendor"><%= t('vendor') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.select :vendor_id, @vendos.pluck(:name, :id), prompt: "#{t('select_vendor')}" %></div>
+    </div>
+    <div class="label-field-pair">
+      <label for="title"><%= t('name') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :name %></div>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

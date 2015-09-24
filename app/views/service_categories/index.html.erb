@@ -1,0 +1,33 @@
+<div class="pageyield">
+  <p id="notice"><%= notice %></p>
+
+  <!--<h1>Listing Service Categories</h1>-->
+
+
+  <% @service_categories.each do |service_category| %>
+
+
+      <div class="list-wrapper">
+          <a href='services/?id=<%= service_category.id %>'>
+          <div class="list-image">
+            <%= image_tag service_category.image.url %>
+          </div>
+          <div class="list-description">
+            <!--<div class="list-name">-->
+              <p><%= service_category.name %></p>
+            <!--</div>-->
+          </div>
+        </a>
+      </div>
+
+
+  <% end %>
+  <div class="clear"></div>
+
+
+  <br>
+
+  <%= link_to 'New Service category', new_service_category_path %>
+</div>
+
+

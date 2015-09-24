@@ -1,0 +1,33 @@
+<%= form_for(@vendor) do |f| %>
+    <% if @vendor.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@vendor.errors.count, "error") %> prohibited this vendor from being saved:</h2>
+
+          <ul>
+            <% @vendor.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="label-field-pair">
+      <label for="title"><%= t('name') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :name %></div>
+    </div>
+    <div class="label-field-pair">
+      <label for="address"><%= t('address') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :address %></div>
+    </div>
+    <div class="label-field-pair">
+      <label for="phone"><%= t('phone') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :phone %></div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
