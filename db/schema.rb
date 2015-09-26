@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924193925) do
+ActiveRecord::Schema.define(version: 20150925103521) do
 
   create_table "service_categories", force: :cascade do |t|
     t.string   "name",               limit: 255
@@ -23,14 +23,29 @@ ActiveRecord::Schema.define(version: 20150924193925) do
     t.datetime "image_updated_at"
   end
 
+  create_table "service_reviews", force: :cascade do |t|
+    t.integer  "rate",       limit: 4
+    t.string   "content",    limit: 255
+    t.integer  "service_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "services", force: :cascade do |t|
     t.string   "name",                limit: 255
-    t.decimal  "price",                           precision: 8, scale: 2
+    t.decimal  "price",                             precision: 8, scale: 2
+    t.text     "description",         limit: 65535
+    t.float    "rate_times",          limit: 24
     t.integer  "capacity",            limit: 4
+    t.string   "location",            limit: 255
+    t.string   "image_file_name",     limit: 255
+    t.string   "image_content_type",  limit: 255
+    t.integer  "image_file_size",     limit: 4
+    t.datetime "image_updated_at"
     t.integer  "vendor_id",           limit: 4
     t.integer  "service_category_id", limit: 4
-    t.datetime "created_at",                                              null: false
-    t.datetime "updated_at",                                              null: false
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
   end
 
   create_table "vendors", force: :cascade do |t|

@@ -19,6 +19,9 @@ class ServicesController < ApplicationController
 
   # GET /services/1/edit
   def edit
+    set_service
+    @service_categories = ServiceCategory.all
+    @vendos = Vendor.all
   end
 
   # POST /services
@@ -55,6 +58,6 @@ class ServicesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_params
-      params[:service].permit :service_category_id, :vendor_id, :name
+      params[:service].permit :service_category_id, :vendor_id, :name, :image
     end
 end

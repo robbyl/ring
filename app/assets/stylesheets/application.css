@@ -21,3 +21,8 @@
 body {
     background: #f0f0f0;
 }
+
+.pageyield {
+    width: 1200px;
+    margin: 100px auto;
+}

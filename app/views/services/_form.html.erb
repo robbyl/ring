@@ -1,15 +1,15 @@
 <%= form_for(@service) do |f| %>
-  <% if @service.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+    <% if @service.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
-      <ul>
-      <% @service.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @service.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
     <div class="label-field-pair">
       <label for="title"><%= t('category') %><span class="necessary-field">*</span>:</label>
@@ -26,8 +26,13 @@
 
       <div class="text-input-bg"><%= f.text_field :name %></div>
     </div>
+    <div class="label-field-pair">
+      <label for="title"><%= t('image') %><span class="necessary-field">*</span>:</label>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="text-input-bg"><%= f.file_field :image %></div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

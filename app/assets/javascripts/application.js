@@ -14,3 +14,25 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require tabbedcontent.js
+
+//$(document).ready(function($) {
+//    var tabs;
+//    tabs = $('.tabscontent').tabbedContent({loop: true}).data('api');
+//
+//    // switch to tab...
+//    $('a[href=#click-to-switch]').on('click', function(e) {
+//        var tab = prompt('Tab to switch to (number or id)?');
+//        if (!tabs.switchTab(tab)) {
+//            alert('That tab does not exist :\\');
+//        }
+//        e.preventDefault();
+//    });
+//
+//    // Next and prev actions
+//    $('.controls a').on('click', function(e) {
+//        var action = $(this).text().replace(/[^a-z]+/i, '').toLowerCase();
+//        tabs[action]();
+//        e.preventDefault();
+//    });
+//});

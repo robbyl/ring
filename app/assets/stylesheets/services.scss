@@ -1,3 +1,55 @@
 // Place all the styles related to the services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.service-left-column {
+  width: 780px;
+  min-height: 900px;
+  margin-right: 20px;
+  background: palegoldenrod;
+  float: left;
+
+  .service-gallery {
+    width: 100%;
+    height: 500px;
+    background: lightcoral;
+  }
+  
+  .service-description {
+    padding: 15px;
+
+    .left-column {
+      float: left;
+      width: 65%;
+      min-height: 100px;
+      background: paleturquoise;
+    }
+
+    .right-column {
+      float: right;
+      width: 35%;
+      min-height: 100px;
+      background-color: lightgrey;
+      text-align: right;
+
+      p {
+        padding-top: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+
+    .more-details {
+      clear: both;
+      padding-top: 20px;
+    }
+  }
+}
+
+.service-right-column {
+  width: 400px;
+  min-height: 900px;
+  background: paleturquoise;
+  float: right;
+}
+
