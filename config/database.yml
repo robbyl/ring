@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: ring_production
-  username: ring
-  password: <%= ENV['RING_DATABASE_PASSWORD'] %>
+  database: ring_development
+  username: root
+#  password: <%= ENV['RING_DATABASE_PASSWORD'] %>
+  password:

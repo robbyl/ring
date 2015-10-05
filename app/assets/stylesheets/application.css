@@ -18,11 +18,139 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background: #f0f0f0;
+    color: #1f1f1f;
+    font-family: 'Georgia';
+    font-size: 16px;
+    line-height: 25px;
+}
+
+input {
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    padding: 8px;
+    width: 300px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input:focus {
+
 }
 
 .pageyield {
     width: 1200px;
-    margin: 100px auto;
+    margin: 100px auto 20px auto;
+}
+
+.header {
+    width: 100%;
+    height: 65px;
+    background: #B5CCA9;
+    border-bottom: 1px solid #ADC69F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo {
+    width: 150px;
+    height: 80px;
+    /*background: white;*/
+    float: left;
+}
+
+.header-inner {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+}
+
+.right-header-buttons {
+    float: right;
+}
+
+.right-header-buttons a {
+    padding: 8px 12px;
+    margin-right: 15px;
+    margin-top: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.lightcoral {
+    background: lightcoral;
+    color: #ffffff !important;
+    border: 1px solid #D87373;
+}
+
+.lightsage {
+    background-color: #D3E0CB;
+    border: 1px solid #A3B898;
+    color: #91A387;
+}
+
+.popup-wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.popup {
+    width: 500px;
+    height: 500px;
+    background: white;
+    margin: 80px auto;
+    padding: 25px;
+    -webkit-box-shadow: 0 0 100px 0px #eeeeee;
+    -moz-box-shadow: 0 0 100px 0px #eeeeee;
+    box-shadow: 0 0 100px 0px #eeeeee;
+    border: 1px solid #CCCCCC;
+}
+
+.close {
+    width: 35px;
+    height: 35px;
+    background: black;
+    float: right;
+    cursor: pointer;
+}
+
+.popup-header {
+    width: 450px;
+    height: 70px;
+    float: left;
+}
+
+.popup-content {
+
+}
+
+.popup-content form {
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
 }

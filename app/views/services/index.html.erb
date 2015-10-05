@@ -1,31 +1,29 @@
-<div class="pageyield">
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-  <% @services.each do |service| %>
-      <div class="list-wrapper">
-        <a href='/services/<%= service.id %>'>
-          <div class="list-image">
-            <%= image_tag 'flower.jpg' %>
-          </div>
-          <div class="list-description">
-            <!--<div class="list-name">-->
-            <p><%= service.name %></p>
+<% @services.each do |service| %>
+    <div class="list-wrapper">
+      <a href='/services/<%= service.id %>'>
+        <div class="list-image">
+          <%= image_tag 'flower.jpg' %>
+        </div>
+        <div class="list-description">
+          <!--<div class="list-name">-->
+          <p><%= service.name %></p>
 
-            <p><%= 'ratings' %></p>
+          <p><%= 'ratings' %></p>
 
-            <p><%= 'location' %></p>
+          <p><%= 'location' %></p>
 
-            <p><%= service.price %></p>
+          <p><%= service.price %></p>
 
-            <!--</div>-->
-          </div>
-        </a>
-      </div>
-  <% end %>
-  <div class="clear"></div>
+          <!--</div>-->
+        </div>
+      </a>
+    </div>
+<% end %>
+<div class="clear"></div>
 
-  <br>
+<br>
 
-  <%= link_to 'New Service', new_service_path %>
-</div>
+<%= link_to 'New Service', new_service_path %>
 

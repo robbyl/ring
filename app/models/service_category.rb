@@ -1,5 +1,6 @@
 class ServiceCategory < ActiveRecord::Base
   has_many :services
+  has_many :budget_services
   has_attached_file :image, { medium: '300x300>', thumb: '100x100#' }
   validates_presence_of :name
   validates_uniqueness_of :name

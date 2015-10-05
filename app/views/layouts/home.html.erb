@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ring</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="popup-container"></div>
+<div class="header">
+  <div class="header-inner">
+    <div class="logo"></div>
+    <div class="right-header-buttons">
+      <%= link_to "#{t('register')}", new_user_path, class: 'lightcoral', remote: true %>
+      <%= link_to "#{t('login')}", new_user_path, class: 'lightsage', remote: true %>
+    </div>
+  </div>
+</div>
+  <%= yield %>
+<div class="footer"></div>
+</body>
+</html>
