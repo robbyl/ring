@@ -36,3 +36,7 @@ en:
   bride_last_name: "Bride last name"
   register: "Register"
   login: "Login"
+  capacity: "Capacity"
+  description: "Description"
+  reviews: "Reviews"
+  location: "Location"

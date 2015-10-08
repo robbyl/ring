@@ -56,9 +56,19 @@
 
 .list-description {
   padding: 10px;
+  line-height: 20px !important;
+  
  p {
    text-align: center;
  }
+  
+  .stars {
+    margin: auto;
+    width: 115px;
+  }
+  .star {
+    padding-top: 0;
+  }
 }
 
 .clear {
