@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<div class="label-field-pair">
+  <label><%= t('bride_first_name') %><span class="necessary-field">*</span>:</label>
+
+  <div class="text-input-bg"><%= @wedding.groom_first_name  %></div>
+</div>
+
+<%= link_to 'Edit', edit_wedding_path(@wedding) %> |
+<%= link_to 'Edit', edit_wedding_path(@wedding) %> |
+<%= link_to 'Back', weddings_path %>

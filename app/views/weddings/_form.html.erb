@@ -1,0 +1,53 @@
+<%= form_for(@wedding) do |f| %>
+    <% if @wedding.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@wedding.errors.count, "error") %> prohibited this wedding from being saved:</h2>
+
+          <ul>
+            <% @wedding.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="label-field-pair">
+      <label><%= t('groom_first_name') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :groom_first_name %></div>
+    </div>
+    <div class="label-field-pair">
+      <label><%= t('groom_last_name') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :groom_last_name %></div>
+    </div>
+    <div class="label-field-pair">
+      <label><%= t('bride_first_name') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :bride_first_name %></div>
+    </div>
+    <div class="label-field-pair">
+      <label><%= t('bride_last_name') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :bride_last_name %></div>
+    </div>
+    <div class="label-field-pair">
+      <label><%= t('location') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :location %></div>
+    </div>
+    <div class="label-field-pair">
+      <label><%= t('wedding_date') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :wedding_date %></div>
+    </div>
+    <div class="label-field-pair">
+      <label><%= t('guests_no') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= f.text_field :guests %></div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
