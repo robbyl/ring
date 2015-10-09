@@ -30,6 +30,9 @@
       <label for="title"><%= t('image') %><span class="necessary-field">*</span>:</label>
 
       <div class="text-input-bg"><%= f.file_field :image %></div>
+      <label for="title"><%= t('images') %><span class="necessary-field">*</span>:</label>
+
+      <div class="text-input-bg"><%= file_field_tag 'images[]', type: 'file', multiple: true %></div>
     </div>
 
     <div class="actions">

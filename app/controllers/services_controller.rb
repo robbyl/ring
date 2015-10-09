@@ -29,6 +29,11 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
 
     if @service.save
+      if params[:images]
+        params[:images].each { |image|
+          @service.service_images.create(image: image)
+        }
+      end
       redirect_to @service, notice: 'Service was successfully created.'
     else
       render :new

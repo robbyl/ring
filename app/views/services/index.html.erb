@@ -9,7 +9,7 @@
         <div class="list-description">
           <!--<div class="list-name">-->
           <p><%= service.name %></p>
-
+          <% service.rate_times = 10 if service.rate_times.nil? %>
           <div class="stars">
             <form action="">
               <input class="star star-5" id="star-5" type="radio" disabled name="star" <%= 'checked' unless service.rate_times.floor > 5 %>/>
