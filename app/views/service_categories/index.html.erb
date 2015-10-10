@@ -4,25 +4,22 @@
 
 
 <% @service_categories.each do |service_category| %>
-
-
     <div class="list-wrapper">
+      <div class="list-actions">
+        <%= link_to '', service_category, method: :delete, data: {confirm: 'Are you sure?'}, class: 'fa fa-trash' %>
+        <%= link_to '', edit_service_category_path(service_category), class: 'fa fa-pencil' %>
+      </div>
       <a href='services/?id=<%= service_category.id %>'>
         <div class="list-image">
           <%= image_tag service_category.image.url %>
         </div>
         <div class="list-description">
-          <!--<div class="list-name">-->
           <p><%= service_category.name %></p>
-          <!--</div>-->
         </div>
       </a>
     </div>
-
-
 <% end %>
 <div class="clear"></div>
-
 
 <br>
 

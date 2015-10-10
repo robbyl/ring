@@ -1,19 +1,28 @@
 # encoding: utf-8
 
+<style type="text/css">
+    #gallery{
+        height: 450px;
+        width: 780px;
+    }
+</style>
+
 
 <p id="notice"><%= notice %></p>
 
 <div class="service-left-column">
   <div class="service-gallery">
     <div id="gallery">
-      <a href="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/800px-Biandintz_eta_zaldiak_-_modified2.jpg">
+      <% @service.service_images.each do |service_image| %>
+      <a href="<%= service_image.image.url %>">
         <img
-        src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/100px-Biandintz_eta_zaldiak_-_modified2.jpg",
-        data-big="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/1280px-Biandintz_eta_zaldiak_-_modified2.jpg">
+        src="<%= service_image.image.url %>",
+        data-big="<%= service_image.image.url %>">
         <!--data-title="Image title"-->
         <!--data-description="Image description"-->
 
       </a>
+          <% end %>
     </div>
   </div>
   <div class="service-description">
@@ -86,12 +95,14 @@
       $('.tabs').tabslet();
 
       // Initialize Galleria
-      Galleria.run('#gallery', {
-          height: parseInt($('#gallery').css('height')),
-          wait: true,
-          debug: false
-      });
+
   });
+
+  Galleria.run('#gallery', {
+      wait: true,
+      debug: true
+  });
+
 </script>
 
 
