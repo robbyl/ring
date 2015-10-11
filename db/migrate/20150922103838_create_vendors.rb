@@ -4,6 +4,8 @@ class CreateVendors < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.string :phone
+      t.string :website
+      t.attachment :logo
 
       t.timestamps null: false
     end

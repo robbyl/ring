@@ -53,6 +53,6 @@ class VendorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def vendor_params
-      params[:vendor].permit :name, :address, :phone
+      params[:vendor].permit :name, :logo, :address, :phone, :website
     end
 end

@@ -40,3 +40,6 @@ en:
   description: "Description"
   reviews: "Reviews"
   location: "Location"
+  phone: "Phone"
+  website: "Website"
+  logo: "Logo"
