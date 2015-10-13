@@ -32,15 +32,22 @@ body {
     line-height: 25px;
 }
 
-input {
+input, select {
     border: 1px solid #dddddd;
     background: #ffffff;
     padding: 8px;
-    width: 300px;
     margin-bottom: 10px;
     outline: none;
     font-family: inherit;
     font-size: 16px;
+}
+
+input {
+    width: 300px;
+}
+
+select {
+    width: 318px;
 }
 
 input:focus {

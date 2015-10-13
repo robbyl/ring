@@ -20,13 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   name: "Name"
   address: "Address"
   category: "Category"
   select_category: "Select category"
   vendor: "Vendor"
-  select_vendor: "Select_vendor"
+  select_vendor: "Select vendor"
   image: "Image"
   groom_first_name: "Groom first name"
   guests_no: "No. of guests"
