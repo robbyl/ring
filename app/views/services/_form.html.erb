@@ -1,41 +1,53 @@
-<%= form_for(@service) do |f| %>
-    <% if @service.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
+<div class="form-wrapper">
+  <%= form_for(@service) do |f| %>
+      <% if @service.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
-          <ul>
-            <% @service.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+            <ul>
+              <% @service.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
 
-    <div class="label-field-pair">
-      <label for="title"><%= t('category') %><span class="necessary-field">*</span>:</label>
+      <div class="label-field-pair">
+        <label for="title"><%= t('category') %><span class="necessary-field">*</span>:</label>
 
-      <div class="text-input-bg"><%= f.select :service_category_id, @service_categories.pluck(:name, :id), prompt: "#{t('select_category')}" %></div>
-    </div>
-    <div class="label-field-pair">
-      <label for="vendor"><%= t('vendor') %><span class="necessary-field">*</span>:</label>
+        <div class="text-input-bg"><%= f.select :service_category_id, @service_categories.pluck(:name, :id), prompt: "#{t('select_category')}" %></div>
+      </div>
+      <div class="label-field-pair">
+        <label for="vendor"><%= t('vendor') %><span class="necessary-field">*</span>:</label>
 
-      <div class="text-input-bg"><%= f.select :vendor_id, @vendos.pluck(:name, :id), prompt: "#{t('select_vendor')}" %></div>
-    </div>
-    <div class="label-field-pair">
-      <label for="title"><%= t('name') %><span class="necessary-field">*</span>:</label>
+        <div class="text-input-bg"><%= f.select :vendor_id, @vendos.pluck(:name, :id), prompt: "#{t('select_vendor')}" %></div>
+      </div>
+      <div class="label-field-pair">
+        <label for="title"><%= t('name') %><span class="necessary-field">*</span>:</label>
 
-      <div class="text-input-bg"><%= f.text_field :name %></div>
-    </div>
-    <div class="label-field-pair">
-      <label for="title"><%= t('image') %><span class="necessary-field">*</span>:</label>
+        <div class="text-input-bg"><%= f.text_field :name %></div>
+      </div>
+      <div class="label-field-pair">
+        <label for="title"><%= t('price') %><span class="necessary-field">*</span>:</label>
 
-      <div class="text-input-bg"><%= f.file_field :image %></div>
-      <label for="title"><%= t('images') %><span class="necessary-field">*</span>:</label>
+        <div class="text-input-bg"><%= f.text_field :price %></div>
+      </div>
+      <div class="label-field-pair">
+        <label for="title"><%= t('featured_image') %><span class="necessary-field">*</span>:</label>
 
-      <div class="text-input-bg"><%= file_field_tag 'images[]', type: 'file', multiple: true %></div>
-    </div>
+        <div class="text-input-bg"><%= f.file_field :image %></div>
+        <label for="title"><%= t('images') %><span class="necessary-field">*</span>:</label>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-<% end %>
+        <div class="text-input-bg"><%= file_field_tag 'images[]', type: 'file', multiple: true %></div>
+      </div>
+      <div class="label-field-pair">
+        <label for="title"><%= t('description') %><span class="necessary-field">*</span>:</label>
+
+        <div class="text-input-bg"><%= f.text_area :description, id: 'redactor-content' %></div>
+      </div>
+
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+  <% end %>
+</div>

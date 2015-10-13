@@ -32,7 +32,16 @@ body {
     line-height: 25px;
 }
 
-input, select {
+.form-wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form-wrapper form {
+    width: auto;
+}
+
+input, select, textarea {
     border: 1px solid #dddddd;
     background: #ffffff;
     padding: 8px;
@@ -43,11 +52,16 @@ input, select {
 }
 
 input {
-    width: 300px;
+    width: 400px;
 }
 
 select {
-    width: 318px;
+    width: 418px;
+}
+
+textarea {
+    width: 550px;
+    min-height: 350px;
 }
 
 input:focus {

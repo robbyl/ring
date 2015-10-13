@@ -27,6 +27,8 @@ class ServicesController < ApplicationController
   # POST /services
   def create
     @service = Service.new(service_params)
+    @service_categories = ServiceCategory.all
+    @vendos = Vendor.all
 
     if @service.save
       if params[:images]
@@ -63,6 +65,6 @@ class ServicesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def service_params
-      params[:service].permit :service_category_id, :vendor_id, :name, :image
+      params[:service].permit :service_category_id, :vendor_id, :name, :price, :description, :image
     end
 end
