@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RedactorRails::Engine => '/redactor_rails'
   resources :users
   resources :weddings
   resources :service_categories

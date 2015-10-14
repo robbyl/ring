@@ -43,7 +43,7 @@
       <div class="label-field-pair">
         <label for="title"><%= t('description') %><span class="necessary-field">*</span>:</label>
 
-        <div class="text-input-bg"><%= f.text_area :description, id: 'redactor-content' %></div>
+        <div class="text-input-bg"><%= f.text_area :description, class: 'redactor' %></div>
       </div>
 
       <div class="actions">
@@ -51,3 +51,4 @@
       </div>
   <% end %>
 </div>
+

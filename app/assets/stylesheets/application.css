@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require redactor-rails
+ *= redactor-rails/plugins
 
  */
 * {
@@ -60,8 +62,17 @@ select {
 }
 
 textarea {
-    width: 550px;
-    min-height: 350px;
+    min-width: 500px;
+    min-height: 200px;
+    padding: 10px;
+}
+
+.redactor-editor {
+    min-height: 200px;
+}
+
+.redactor-editor p {
+    margin-bottom: 5px !important;
 }
 
 input:focus {
