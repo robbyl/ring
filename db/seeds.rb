@@ -1,27 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-# ServiceCategory.create!([
-#   {name: "Reception Venues", image_file_name: "venue.jpg", image_content_type: "image/jpeg", image_file_size: 61609},
-#   {name: "Flowers", image_file_name: "flowers.jpg", image_content_type: "image/jpeg", image_file_size: 43325},
-#   {name: "Jewel", image_file_name: "rings.jpg", image_content_type: "image/jpeg", image_file_size: 20412},
-#   {name: "Photographs", image_file_name: "photography.jpg", image_content_type: "image/jpeg", image_file_size: 19927},
-#   {name: "Wedding cards", image_file_name: "invitation_cards.jpg", image_content_type: "image/jpeg", image_file_size: 27007},
-#   {name: "Videographs", image_file_name: "videograph.jpg", image_content_type: "image/jpeg", image_file_size: 19892},
-#   {name: "Wedding Cake", image_file_name: "cake.jpg", image_content_type: "image/jpeg", image_file_size: 48888}
-# ])
-
-
-# Budget.create!([
-#   {wedding_id: 12},
-#   {wedding_id: 17}
-# ])
 Service.create!([
-  {name: "Diamond jubelee hall", price: nil, description: nil, rate_times: nil, capacity: nil, location: nil, image_file_name: "beach-wedding-venues.jpg", image_content_type: "image/jpeg", image_file_size: 96829, image_updated_at: "2015-10-11 18:21:52", vendor_id: 1, service_category_id: 1}
+  {name: "Bride flowers", price: nil, description: nil, rate_times: nil, capacity: nil, location: nil, image_file_name: "White-Bridal-Bouquet-Mixed-with-Cameo-Pink-Roses.jpg", image_content_type: "image/jpeg", image_file_size: 64119, image_updated_at: "2015-10-13 08:16:16", vendor_id: 2, service_category_id: 2},
+  {name: "Diamond jubilee hall", price: "2500000.0", description: "Planning on holding your wedding at an outdoor wedding venue in the UK? Then consider nature’s colours of the seasons. Whether getting married in summer which is the most common choice, or in spring or autumn nature provides it’s own wonderful colour palette for you to add your decor to.\r\n\r\nIf you are a bride or groom planning your wedding during the spring, summer or autumn seasons here are some tips on colours that will go with your chosen time of the year.\r\n\r\nWhether woodland hues, rich earth tones or light pastels, let the season of your wedding help you with your colour palette. In particular these colour choices will serve you well when planning your outdoor wedding.", rate_times: nil, capacity: nil, location: nil, image_file_name: "4127726942_8fc0ac7df6_o.jpg", image_content_type: "image/jpeg", image_file_size: 1027310, image_updated_at: "2015-10-13 10:46:14", vendor_id: 1, service_category_id: 1},
+  {name: "another hall", price: "4596866.0", description: "<p style=\"text-align: center;\">\r\n\t<strong></strong><span style=\"font-size: 20px;\"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis alique</strong> </span>\r\n</p>\r\n<p style=\"text-align: center;\">\r\n\t<span style=\"font-size: 20px;\"><br>\r\n\t</span>\r\n</p>\r\n<p>\r\n\t<em>tincidunt. Integer scelerisque augue eu tempor efficitur. Suspendisse potenti.</em>\r\n</p>\r\n<p>\r\n\t<em><br>\r\n\t</em>\r\n</p>\r\n<p>\r\n\t<em></em>tempus ac lacus non tempor. Aliquam erat volutpat. Etiam eget orci sed magna malesuada cursus vitae vitae ipsum. Aenean aliquam ipsum nec pretium ultrices. Aliquam erat volutpat. Donec ante nisi, tincidunt ac ultricies sed, consequat at nisi. Nunc ornare risus eu posuere aliquam. Duis eu tortor ut velit interdum molestie. Pellentesque sodales ac odio vel blandit. Nunc efficitur ac dui eu condimentum. Vestibulum tristique justo et diam placerat malesuada sit amet non tortor. Duis commodo enim purus, nec facilisis libero cursus quis. Duis sollicitudin vel ante at fringilla.\r\n</p>\r\n<p>\r\n\tFusce eget consequat lacus. Integer egestas, quam non venenatis sodales, dolor quam vulputate nisi, a tincidunt nisi ex volutpat nisl. Quisque dictum ut ligula ut finibus. Aliquam id dui cursus, placerat nibh in, consequat nisi. Morbi purus nibh, mollis nec tellus in, luctus blandit augue. Praesent id libero vel ligula ultrices congue nec sed odio. Ut accumsan urna ac enim placerat, at scelerisque orci sollicitudin. Cras egestas augue eget risus pellentesque aliquam. Proin quis leo non urna condimentum varius. Aenean sollicitudin lacus turpis, quis ultrices nisi imperdiet quis. Morbi imperdiet libero eget maximus elementum. Aenean commodo laoreet fermentum. Maecenas tincidunt porttitor mattis. Pellentesque ac viverra lectus. Integer hendrerit metus a nisi pharetra posuere. Nulla ac posuere ipsum, nec tincidunt odio.\r\n</p>\r\n<p>\r\n\tMauris nec mi quis mauris fermentum consectetur vel vel leo. Integer ac augue et nibh mollis dapibus id ac tortor. In hac habitasse platea dictumst. Ut molestie dui id lorem consectetur venenatis. Vivamus est turpis, congue et aliquet vitae, tristique et sem. Aenean vel libero odio. Suspendisse id urna id tortor scelerisque pharetra nec porta ligula.\r\n</p>\r\n<p>\r\n\tMaecenas lacinia eros eget congue congue. Nam aliquam erat erat, sit amet dictum ipsum consectetur in. Donec vitae ligula hendrerit, feugiat purus ac, efficitur felis. Proin porta nulla in nibh commodo, et venenatis augue sollicitudin. Curabitur nec laoreet lorem. Etiam eget lorem viverra, consequat urna id, sagittis massa. Suspendisse eget commodo lectus. Proin blandit ornare arcu, sit amet dictum orci finibus ac. Vestibulum molestie lectus enim, id rhoncus nulla molestie quis. Vestibulum sapien ex, sagittis ut massa nec, ultrices tristique metus. Nunc mi libero, tempor sed est id, faucibus laoreet quam. Sed non justo egestas est commodo sodales. Ut vel turpis sem. Sed vitae enim ac magna porttitor egestas a molestie sapien.\r\n</p>", rate_times: nil, capacity: nil, location: nil, image_file_name: "reception_598.jpg", image_content_type: "image/jpeg", image_file_size: 35055, image_updated_at: "2015-10-17 09:30:24", vendor_id: 1, service_category_id: 1}
 ])
 ServiceCategory.create!([
   {name: "Reception Venues", image_file_name: "venue.jpg", image_content_type: "image/jpeg", image_file_size: 61609, image_updated_at: "2015-10-10 12:05:07"},
@@ -33,14 +13,21 @@ ServiceCategory.create!([
   {name: "Wedding Cake", image_file_name: "cake.jpg", image_content_type: "image/jpeg", image_file_size: 48888, image_updated_at: "2015-09-24 22:01:25"}
 ])
 ServiceImage.create!([
-  {image_file_name: "reception_598.jpg", image_content_type: "image/jpeg", image_file_size: 35055, image_updated_at: "2015-10-11 17:52:04", service_id: 4},
-  {image_file_name: "wedding-venue-monaco1.jpg", image_content_type: "image/jpeg", image_file_size: 473686, image_updated_at: "2015-10-11 17:52:04", service_id: 4}
+  {image_file_name: "catchy-wedding-bouquets-nd-edition-belle-magazine_wedding-bouquets-wedding-bouquets-cost.jpg", image_content_type: "image/jpeg", image_file_size: 94319, image_updated_at: "2015-10-13 08:16:16", service_id: 3},
+  {image_file_name: "Real-font-b-Image-b-font-Romantic-2015-Bridal-font-b-Bouquets-b-font-with-Delicate.jpg", image_content_type: "image/jpeg", image_file_size: 117241, image_updated_at: "2015-10-13 08:16:16", service_id: 3},
+  {image_file_name: "spring-bouqute.jpg", image_content_type: "image/jpeg", image_file_size: 96440, image_updated_at: "2015-10-13 08:16:16", service_id: 3},
+  {image_file_name: "homeslide2.jpg", image_content_type: "image/jpeg", image_file_size: 812883, image_updated_at: "2015-10-13 10:46:14", service_id: 4},
+  {image_file_name: "wedding-decoration-white.jpg", image_content_type: "image/jpeg", image_file_size: 91660, image_updated_at: "2015-10-13 10:46:15", service_id: 4},
+  {image_file_name: "wedding-venues-throughout-free-wedding-venues.jpg", image_content_type: "image/jpeg", image_file_size: 230161, image_updated_at: "2015-10-13 10:46:15", service_id: 4},
+  {image_file_name: "reception_598.jpg", image_content_type: "image/jpeg", image_file_size: 35055, image_updated_at: "2015-10-17 09:30:25", service_id: 5},
+  {image_file_name: "wedding-venue-monaco1.jpg", image_content_type: "image/jpeg", image_file_size: 473686, image_updated_at: "2015-10-17 09:30:25", service_id: 5}
 ])
 User.create!([
-  {first_name: nil, last_name: nil, username: "admin", salt: nil, hashed_password: nil, is_admin: false}
+  {first_name: nil, last_name: nil, username: "admin", salt: "[QkYq6x[", hashed_password: "5aeb4b16f702943a087feb98bb3773e6f0879a40", is_admin: true}
 ])
 Vendor.create!([
-  {name: "Aghakan", address: "Upanga", phone: "+255713987564", website: "http://aghakan.com", logo_file_name: "aghakan.jpg", logo_content_type: "image/jpeg", logo_file_size: 33094, logo_updated_at: "2015-10-11 18:35:40"}
+  {name: "Aghakan", address: "Upanga", phone: "+255713987564", website: "http://aghakan.com", logo_file_name: "aghakan.jpg", logo_content_type: "image/jpeg", logo_file_size: 33094, logo_updated_at: "2015-10-11 18:35:40"},
+  {name: "Starlings", address: "Upanga", phone: "+255104587", website: "http://starlings.com", logo_file_name: "starlings.png", logo_content_type: "image/png", logo_file_size: 16566, logo_updated_at: "2015-10-13 08:01:29"}
 ])
 Wedding.create!([
   {groom_first_name: "John", groom_last_name: "Mlugo", bride_first_name: "Jackline", bride_last_name: "Mwiru", location: "Dar es salaam", wedding_date: "2015-12-04", guests: 300},

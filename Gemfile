@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'rmagick', '2.15.4'
 gem 'paperclip', '4.3.1'
-# gem 'seed_dump', '3.2.2'
+gem 'seed_dump', '3.2.2'
 gem 'redactor-rails', '0.5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
@@ -42,10 +42,10 @@ group :development, :test do
   gem 'byebug'
 end
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-end
+# group :development do
+#   # Access an IRB console on exception pages or by using <%= console %> in views
+#   gem 'web-console', '~> 2.0'
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
