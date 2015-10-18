@@ -12,10 +12,9 @@
   <div class="header-inner">
     <div class="logo"></div>
     <div class="right-header-buttons">
-      <%= link_to "#{t('register')}", new_user_path, class: 'lightcoral', remote: true  %>
-      <%= link_to "#{t('login')}", new_user_path, class: 'lightsage', remote: true %>
+      <%= link_to "#{t('register')}", new_user_path, class: 'lightcoral', remote: true %>
+      <%= link_to "#{t('login')}", {controller: 'users', action: 'login'}, class: 'lightsage', remote: true %>
     </div>
-
   </div>
 </div>
 <div class="pageyield">

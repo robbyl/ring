@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
-  resources :users
+  resources :users do
+    collection do
+      get 'login', 'dashboard'
+      post 'authenticate', 'login'
+    end
+  end
   resources :weddings
   resources :service_categories
   resources :services
@@ -13,6 +18,11 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
+  get ':controller/:action'
+  get ':controller/:action/:id'
+  get ':controller/:action/:id/:id2'
+  get ':controller/:action/:id.:format'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

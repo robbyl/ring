@@ -3,8 +3,6 @@
     <div class="bannercontainer">
       <div class="banner">
         <ul>
-          <!-- THE BOXSLIDE EFFECT EXAMPLES  WITH LINK ON THE MAIN SLIDE EXAMPLE -->
-
           <li data-transition="boxslide" data-slotamount="7">
             <%= image_tag 'users/hands.jpg' %>
             <div class="caption sft big_white" data-x="400" data-y="100" data-speed="700" data-start="1700" data-easing="easeOutBack">KICKSTART
@@ -24,7 +22,8 @@
             <%= image_tag 'users/real-wedding.jpg' %>
             <!-- LAYERS -->
             <!-- LAYER NR. 1 -->
-            <div class="tp-caption lightgrey_divider skewfromrightshort fadeout" data-x="85" data-y="224" data-speed="500" data-start="1200" data-easing="Power4.easeOut">My Caption
+            <div class="tp-caption lightgrey_divider skewfromrightshort fadeout" data-x="85" data-y="224" data-speed="500" data-start="1200" data-easing="Power4.easeOut">My
+              Caption
             </div>
           </li>
         </ul>
@@ -82,97 +81,18 @@
 
     <h2>Find all your wedding services in one place and make your plan today</h2>
 
-    <div class="list-wrapper slide-bottom">
-      <a href='services/?id=1'>
-        <div class="list-image">
-          <img src="/system/service_categories/images/000/000/001/original/2.jpg?1443129873" alt="2"/>
+    <% @service_categories.each do |service_category| %>
+        <div class="list-wrapper slide-bottom">
+          <a href='services/?id=<%= service_category.id %>'>
+            <div class="list-image">
+              <%= image_tag service_category.image.url %>
+            </div>
+            <div class="list-description">
+              <p><%= service_category.name %></p>
+            </div>
+          </a>
         </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Reception Venues</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
-    <div class="list-wrapper  slide-bottom">
-      <a href='services/?id=2'>
-        <div class="list-image">
-          <img src="/system/service_categories/images/000/000/002/original/flowers.jpg?1443130328" alt="Flowers"/>
-        </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Flowers</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
-    <div class="list-wrapper slide-bottom">
-      <a href='services/?id=3'>
-        <div class="list-image">
-          <img src="/system/service_categories/images/000/000/003/original/rings.jpg?1443175195" alt="Rings"/>
-        </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Jewel</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
-    <div class="list-wrapper slide-bottom">
-      <a href='services/?id=4'>
-        <div class="list-image">
-          <img src="/images/original/missing.png" alt="Missing"/>
-        </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Photographs</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
-    <div class="list-wrapper slide-bottom">
-      <a href='services/?id=5'>
-        <div class="list-image">
-          <img src="/images/original/missing.png" alt="Missing"/>
-        </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Wedding cards</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
-    <div class="list-wrapper slide-bottom">
-      <a href='services/?id=6'>
-        <div class="list-image">
-          <img src="/images/original/missing.png" alt="Missing"/>
-        </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Videographs</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
-    <div class="list-wrapper slide-bottom">
-      <a href='services/?id=7'>
-        <div class="list-image">
-          <img src="/system/service_categories/images/000/000/007/original/cake.jpg?1443132085" alt="Cake"/>
-        </div>
-        <div class="list-description">
-          <!--<div class="list-name">-->
-          <p>Wedding Cake</p>
-          <!--</div>-->
-        </div>
-      </a>
-    </div>
-
+    <% end %>
     <div class="clear"></div>
   </div>
 </div>
@@ -186,11 +106,11 @@
 <script type="text/javascript">
     jQuery(document).ready(function () {
         jQuery('.banner').revolution({
-                    delay: 9000,
-                    startwidth: 1200,
-                    startheight: 700,
-                    hideThumbs: 10
-                });
+            delay: 9000,
+            startwidth: 1200,
+            startheight: 700,
+            hideThumbs: 10
+        });
 
         $(window).fadeThis({
             speed: 1000,

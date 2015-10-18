@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'rmagick', '2.15.4'
 gem 'paperclip', '4.3.1'
-gem 'seed_dump', '3.2.2'
+# gem 'seed_dump', '3.2.2'
 gem 'redactor-rails', '0.5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'

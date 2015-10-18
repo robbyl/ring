@@ -44,3 +44,5 @@ en:
   logo: "Logo"
   price: "Price"
   featured_image: "Featured image"
+  welcome: "Welcome"
+  login_error_message: "Invalid login credentials, please try again"
