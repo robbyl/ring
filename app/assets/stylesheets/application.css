@@ -257,3 +257,58 @@ label.star:before {
 .list-wrapper:hover > .list-actions {
     display: block;
 }
+
+.main-left-column {
+    width: 390px;
+    min-height: 350px;
+    margin-right: 15px;
+    float: left;
+    text-align: center;
+    background: #ffffff;
+    border-bottom-color: #fafafa;
+    border-top: 1px solid #dddddd;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 8;
+    right: 0;
+}
+
+.main-right-column {
+    width: 780px;
+    min-height: 900px;
+    float: left;
+    background: #ffffff;
+    border-bottom-color: #fafafa;
+    border-top: 1px solid #dddddd;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    background: lightblue;
+    display: block;
+    /*float: left;*/
+    border-radius: 75px;
+
+}
+
+.groom {
+    /*margin-right: 20px;*/
+    float: left;
+}
+
+.bride {
+    float: right;
+}
+
+.profile-pics-wrapper {
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}

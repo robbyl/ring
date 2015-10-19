@@ -63,7 +63,7 @@
           <li><a href="#tab-3">Location map</a></li>
         </ul>
         <div id='tab-1'>
-          <%= @service.description.html_safe %>
+          <%= @service.description.to_s.html_safe %>
         </div>
         <div id='tab-2'>
           It is a long established fact that a reader will be distracted by the readable content of a page when looking
