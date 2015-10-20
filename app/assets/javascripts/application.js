@@ -17,8 +17,3 @@
 //= require redactor-rails/redactor
 //= require redactor-rails/plugins
 //= require redactor-rails/config
-
-
-
-
-
