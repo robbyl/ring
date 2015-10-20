@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_one :wedding
   validates_presence_of :username
   validates_uniqueness_of :username
   attr_accessor :password

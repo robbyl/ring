@@ -46,3 +46,7 @@ en:
   featured_image: "Featured image"
   welcome: "Welcome"
   login_error_message: "Invalid login credentials, please try again"
+  search_for: "Search for Vendors, Services, and Weddings"
+  vendors: "Vendors"
+  services: "Services"
+  weddings: "Weddings"
