@@ -8,6 +8,7 @@ class CreateWeddings < ActiveRecord::Migration
       t.string :location
       t.date :wedding_date
       t.integer :guests
+      t.references :user
 
 
       t.timestamps null: false
