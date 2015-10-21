@@ -11,6 +11,12 @@
 <div class="header">
   <div class="header-inner">
     <div class="logo"></div>
+    <%= text_field_tag :search, params[:s], placeholder: "#{t(:search_for)}", class: 'search-box' %>
+    <ul class="header-menu">
+      <li><%= link_to "#{t(:vendors)}", vendors_path %></li>
+      <li><%= link_to "#{t(:services)}", service_categories_path %></li>
+      <li><%= link_to "#{t(:weddings)}", weddings_path %></li>
+    </ul>
     <div class="right-header-buttons">
       <%= link_to "#{t('register')}", new_user_path, class: 'lightcoral', remote: true %>
       <%= link_to "#{t('login')}", {controller: 'users', action: 'login'}, class: 'lightsage', remote: true %>

@@ -327,7 +327,23 @@ label.star:before {
     display: block;
     /*float: left;*/
     border-radius: 75px;
+    overflow: hidden;
+}
 
+.profile-pic-wrapper p {
+    font-family: 'GreatVibes' !important;
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+.and {
+    font-family: GreatVibes;
+    float: left;
+    font-size: 30px;
+    /*width: 30px;*/
+    margin-top: 70px;
+    margin-left: 4px;
+    color: lightcoral;
 }
 
 .groom {
