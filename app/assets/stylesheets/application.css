@@ -101,6 +101,10 @@ input:focus {
     height: 80px;
     /*background: white;*/
     float: left;
+    font-family: 'GreatVibes';
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 60px;
 }
 
 .header-inner {
