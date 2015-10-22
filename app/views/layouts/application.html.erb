@@ -10,7 +10,7 @@
 <div id="popup-container"></div>
 <div class="header">
   <div class="header-inner">
-    <div class="logo"></div>
+    <div class="logo"><a href="/" title="<%= "#{t('go_to_nuptoo_home')}" %>"><%= image_tag 'logo.png' %></a></div>
     <%= text_field_tag :search, params[:s], placeholder: "#{t(:search_for)}", class: 'search-box' %>
     <ul class="header-menu">
       <li><%= link_to "#{t(:vendors)}", vendors_path %></li>

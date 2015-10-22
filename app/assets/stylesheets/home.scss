@@ -22,7 +22,6 @@
   overflow: hidden;
   border-bottom: 1px solid #e0e0e0;
 
-
   h1 {
     text-align: center;
     margin: 40px auto;
@@ -32,15 +31,21 @@
     font-family: 'GreatVibes' !important;
     font-size: 4.0em;
     font-weight: normal;
+    color: #68a697;
   }
 
   h2 {
     text-align: center;
-    margin: 40px auto 50px auto;
+    margin: 0px auto 50px auto !important;
     width: 600px;
-    font-family: 'Edwardian Script ITC' !important;
-    font-weight: normal;
-    font-size: 3em;
+    color: #68a697;
+    line-height: 50px;
+    //font-family: 'Edwardian Script ITC' !important;
+    font: {
+      family: GreatVibes;
+      weight: normal;
+      size: 3em;
+    }
   }
 
   .bg-image {
@@ -79,12 +84,12 @@
 }
 
 .bannercontainer {
-  width:100%;
-  position:relative;
-  padding:0;
+  width: 100%;
+  position: relative;
+  padding: 0;
 }
 
-.banner{
-  width:100%;
-  position:relative;
+.banner {
+  width: 100%;
+  position: relative;
 }
