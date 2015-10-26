@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :uploads
   mount RedactorRails::Engine => '/redactor_rails'
   resources :users do
     collection do
