@@ -21,12 +21,15 @@ class UploadsController < ApplicationController
 
   # POST /uploads
   def create
-    @upload = Upload.new(upload_params)
+    @wedding_photo = WeddingPhoto.new(upload_params)
 
-    if @upload.save
-      redirect_to @upload, notice: 'Upload was successfully created.'
+    if @wedding_photo.save
+      # send success header
+      render json: { message: "success", fileID: @wedding_photo.id }, :status => 200
     else
-      render :new
+      #  you need to send an error header, otherwise Dropzone
+      #  will not interpret the response as an error:
+      render json: { error: @upload.errors.full_messages.join(',')}, :status => 400
     end
   end
 
@@ -41,18 +44,21 @@ class UploadsController < ApplicationController
 
   # DELETE /uploads/1
   def destroy
-    @upload.destroy
-    redirect_to uploads_url, notice: 'Upload was successfully destroyed.'
+    if @upload.destroy
+      render json: { message: "File deleted from server" }
+    else
+      render json: { message: @upload.errors.full_messages.join(',') }
+    end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_upload
-      @upload = Upload.find(params[:id])
+      @upload = WeddingPhoto.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def upload_params
-      params[:upload]
+      params[:upload].permit :image
     end
 end

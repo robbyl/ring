@@ -1,17 +1,6 @@
-<%= form_for(@upload) do |f| %>
-  <% if @upload.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
-
-      <ul>
-      <% @upload.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for(@upload, html: {multipart: true, class: "dropzone"}) do |f| %>
+    <div class="fallback">
+      <%= f.file_field :image %><br>
+      <%= f.submit "Upload" %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

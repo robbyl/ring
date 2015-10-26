@@ -20,3 +20,4 @@
 //= require lightgallery/lightgallery
 //= require lightgallery/lg-thumbnail
 //= require lightgallery/lg-fullscreen
+//= require dropzone.min

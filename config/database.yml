@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: 0881
   host: localhost
 
 development:
@@ -52,4 +52,4 @@ production:
   database: ring_development
   username: root
 #  password: <%= ENV['RING_DATABASE_PASSWORD'] %>
-  password:
+  password: 0881

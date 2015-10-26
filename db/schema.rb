@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009101940) do
+ActiveRecord::Schema.define(version: 20151026120023) do
 
   create_table "budget_services", force: :cascade do |t|
     t.decimal  "cost",                          precision: 8, scale: 2
@@ -74,6 +74,11 @@ ActiveRecord::Schema.define(version: 20151009101940) do
     t.datetime "updated_at",                                                 null: false
   end
 
+  create_table "uploads", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name",      limit: 255
     t.string   "last_name",       limit: 255
@@ -98,6 +103,23 @@ ActiveRecord::Schema.define(version: 20151009101940) do
     t.datetime "updated_at",                    null: false
   end
 
+  create_table "wedding_albums", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.integer  "wedding_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "wedding_photos", force: :cascade do |t|
+    t.integer  "wedding_id",         limit: 4
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
   create_table "weddings", force: :cascade do |t|
     t.string   "groom_first_name", limit: 255
     t.string   "groom_last_name",  limit: 255
@@ -106,6 +128,7 @@ ActiveRecord::Schema.define(version: 20151009101940) do
     t.string   "location",         limit: 255
     t.date     "wedding_date"
     t.integer  "guests",           limit: 4
+    t.integer  "user_id",          limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
