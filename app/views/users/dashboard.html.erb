@@ -26,30 +26,7 @@
         <div id="add-files-wrapper"></div>
         <%= link_to '', {controller: :uploads, action: :new}, class: 'add-image', remote: true %>
         <div id="lightgallery">
-          <a href="<%= image_url 'groom.jpg' %>">
-            <%= image_tag 'groom.jpg' %>
-          </a>
-          <a href="<%= image_url 'bride.jpg' %>">
-            <%= image_tag 'bride.jpg' %>
-          </a>
-          <a href="<%= image_url 'groom.jpg' %>">
-            <%= image_tag 'groom.jpg' %>
-          </a>
-          <a href="<%= image_url 'bride.jpg' %>">
-            <%= image_tag 'bride.jpg' %>
-          </a>
-          <a href="<%= image_url 'groom.jpg' %>">
-            <%= image_tag 'groom.jpg' %>
-          </a>
-          <a href="<%= image_url 'bride.jpg' %>">
-            <%= image_tag 'bride.jpg' %>
-          </a>
-          <a href="<%= image_url 'groom.jpg' %>">
-            <%= image_tag 'groom.jpg' %>
-          </a>
-          <a href="<%= image_url 'bride.jpg' %>">
-            <%= image_tag 'bride.jpg' %>
-          </a>
+          <%= render partial: 'weddings/wedding_photos' %>
         </div>
       </div>
       <div id='tab-2'>

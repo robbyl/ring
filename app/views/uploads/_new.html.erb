@@ -1,9 +1,12 @@
-<div class="add-popup-wrapper">
-  <h1>New Upload</h1>
+<div class="popup-wrapper">
+  <div class="popup photo-upload">
+    <h1>New Upload</h1>
 
-  <%= render 'form' %>
+    <%= render 'form' %>
 
-  <%= link_to 'Back', uploads_path %>
+    <%= link_to 'Back', uploads_path %>
+  </div>
+
 </div>
 
 <script>
@@ -38,9 +41,9 @@
                     url: '/uploads/' + id,
                     success: function (data) {
                         console.log(data.message);
-                        var preview = $('a#'+id).parent();
-                        preview.fadeOut('fast', function(){
-                        preview.destroy();
+                        var preview = $('a#' + id).parent();
+                        preview.fadeOut('fast', function () {
+                            preview.destroy();
                         });
                     }
                 });

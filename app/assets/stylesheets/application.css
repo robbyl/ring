@@ -209,6 +209,10 @@ input:focus {
     border: 1px solid #CCCCCC;
 }
 
+.photo-upload {
+    width: 1000px;
+}
+
 .close {
     width: 35px;
     height: 35px;
