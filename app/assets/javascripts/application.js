@@ -17,3 +17,6 @@
 //= require redactor-rails/redactor
 //= require redactor-rails/plugins
 //= require redactor-rails/config
+//= require lightgallery/lightgallery
+//= require lightgallery/lg-thumbnail
+//= require lightgallery/lg-fullscreen
