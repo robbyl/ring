@@ -19,6 +19,13 @@ class WeddingsController < ApplicationController
   def edit
   end
 
+  def load_album_photos
+    @wedding_photos = Wedding.all
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # POST /weddings
   def create
     @wedding = Wedding.new(wedding_params)

@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       post 'authenticate', 'login'
     end
   end
-  resources :weddings
+  resources :weddings do
+    collection do
+      get 'load_album_photos'
+    end
+  end
   resources :service_categories
   resources :services
   resources :vendors

@@ -49,7 +49,10 @@
 
       $('.close').click(function () {
           $('#add-files-wrapper').children().remove();
-          $('#lightgallery').html("<%= escape_javascript(render partial: 'weddings/wedding_photos') %>");
+          $.ajax({
+              type: "GET",
+              url: "/weddings/load_album_photos"
+          });
       });
   });
 
