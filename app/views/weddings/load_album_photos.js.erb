@@ -1,1 +1,6 @@
-$('#lightgallery').html("<%= escape_javascript(render partial: 'weddings/wedding_photos') %>");
+var lightgallery = $('#lightgallery');
+lightgallery.html("<%= escape_javascript(render partial: 'weddings/wedding_photos') %>");
+lightgallery.data('lightGallery').destroy(true);
+lightgallery.lightGallery({
+    thumbnail: true
+});
