@@ -103,6 +103,13 @@ ActiveRecord::Schema.define(version: 20151026120023) do
     t.datetime "updated_at",                    null: false
   end
 
+  create_table "wedding_album_photos", force: :cascade do |t|
+    t.integer  "wedding_album_id", limit: 4
+    t.integer  "wedding_photo_id", limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
   create_table "wedding_albums", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.integer  "wedding_id", limit: 4
@@ -128,7 +135,6 @@ ActiveRecord::Schema.define(version: 20151026120023) do
     t.string   "location",         limit: 255
     t.date     "wedding_date"
     t.integer  "guests",           limit: 4
-    t.integer  "user_id",          limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end

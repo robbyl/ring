@@ -1,6 +1,6 @@
 <% @wedding_photos = WeddingPhoto.all %>
 <% @wedding_photos.each do |wedding_photo| %>
-    <a href="<%= wedding_photo.image.url %>">
+    <a href="<%= wedding_photo.image.url %>" class="thumb-wrapper">
       <%= image_tag wedding_photo.image.url(:thumb) %>
     </a>
 <% end %>

@@ -382,3 +382,15 @@ label.star:before {
     margin-left: auto;
     margin-right: auto;
 }
+
+.thumb-wrapper {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
