@@ -5,20 +5,18 @@
 
     <%= render 'form' %>
 
-    <%= link_to 'Back', uploads_path %>
   </div>
 
 </div>
 
 <script type="text/javascript">
+  $(document).ready(function(){
       Dropzone.autoDiscover = false;
 
       // grap our upload form by its id
       $("#new_upload").dropzone({
           // restrict image size to a maximum 1MB
           maxFilesize: 1,
-          // changed the passed param to one accepted by
-          // our rails app
           paramName: "upload[image]",
           // show remove links on each image upload
           addRemoveLinks: true,
@@ -51,6 +49,8 @@
 
       $('.close').click(function () {
           $('#add-files-wrapper').children().remove();
-//          $('#lightgallery').html(<%= escape_javascript(render partial: 'weddings/wedding_photos') %>);
+          $('#lightgallery').html("<%= escape_javascript(render partial: 'weddings/wedding_photos') %>");
       });
+  });
+
 </script>
