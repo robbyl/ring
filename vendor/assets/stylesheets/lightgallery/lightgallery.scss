@@ -99,8 +99,8 @@
     }
 
     .lg-item {
-        background: url(../img/loading.gif) no-repeat scroll center center transparent;
-        display: none !important; 
+        background: asset-url('lightgallery/loading.gif') no-repeat scroll center center transparent;
+        display: none !important;
     }
     &.lg-css3{
         .lg-prev-slide, .lg-current, .lg-next-slide{
