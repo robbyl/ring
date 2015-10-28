@@ -1,31 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Weddings</h1>
+<div class="listing-filter-left"></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Goom first name</th>
-      <th>Location</th>
-      <th>Wedding date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @weddings.each do |wedding| %>
-      <tr>
-        <td><%= wedding.groom_first_name %></td>
-        <td><%= wedding.location %></td>
-        <td><%= wedding.wedding_date %></td>
-        <td><%= link_to 'Show', wedding %></td>
-        <td><%= link_to 'Edit', edit_wedding_path(wedding) %></td>
-        <td><%= link_to 'Destroy', wedding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<div class="listing-right">
+  <% @weddings.each do |wedding| %>
+      <div class="list-wrapper">
+        <div class="list-actions">
+          <%= link_to '', wedding, method: :delete, data: {confirm: 'Are you sure?'}, class: 'fa fa-trash' %>
+          <%= link_to '', edit_wedding_path(wedding), class: 'fa fa-pencil' %>
+        </div>
+        <a href='<%= wedding_path wedding.id %>'>
+          <div class="profile-pic-wrapper-small">
+            <div class="profile-pic-wrapper groom">
+              <div class="profile-pic-small"><%= image_tag 'groom.jpg' %></div>
+              <p><%= wedding.groom_first_name %></p>
+            </div>
+            <div class="and" style="margin: 50px 10px 0 12px;">&</div>
+            <div class="profile-pic-wrapper bride">
+              <div class="profile-pic-small"><%= image_tag 'bride.jpg' %></div>
+              <p><%= wedding.bride_first_name %></p>
+            </div>
+          </div>
+          <div class="list-description">
+            <p><%= '8894 days ago'%></p>
+          </div>
+        </a>
+      </div>
+  <% end %>
+</div>
+<div class="clear"></div>
 <br>
 
 <%= link_to 'New Wedding', new_wedding_path %>

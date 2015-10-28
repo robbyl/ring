@@ -1,30 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="listing-filter-left"></div>
 
-<h1>Listing Vendors</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><%= t('name') %></th>
-      <th><%= t('address') %></th>
-      <th><%= t('phone') %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @vendors.each do |vendor| %>
-      <tr>
-        <td><%= vendor.name %></td>
-        <td><%= vendor.address %></td>
-        <td><%= vendor.phone %></td>
-        <td><%= link_to 'Show', vendor %></td>
-        <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
-        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="listing-right">
+  <% @vendors.each do |vendor| %>
+      <div class="list-wrapper">
+        <div class="list-actions">
+          <%= link_to '', vendor, method: :delete, data: {confirm: 'Are you sure?'}, class: 'fa fa-trash' %>
+          <%= link_to '', edit_vendor_path(vendor), class: 'fa fa-pencil' %>
+        </div>
+        <a href='<%= vendor_path vendor.id %>'>
+          <div class="list-image">
+            <%= image_tag vendor.logo.url %>
+          </div>
+          <div class="list-description">
+            <p><%= vendor.name %></p>
+          </div>
+        </a>
+      </div>
+  <% end %>
+</div>
+<div class="clear"></div>
 
 <br>
 

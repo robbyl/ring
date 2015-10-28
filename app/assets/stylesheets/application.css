@@ -394,3 +394,16 @@ label.star:before {
     margin-bottom: 5px;
 }
 
+.listing-filter-left {
+    margin-right: 13px;
+    width: 285px;
+    height: 500px;
+    float: left;
+}
+
+.listing-right {
+    width: 900px;
+    float: left;
+    height: 600px;
+}
+
