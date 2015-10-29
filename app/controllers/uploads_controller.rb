@@ -23,7 +23,7 @@ class UploadsController < ApplicationController
   # POST /uploads
   def create
     @current_user = current_user
-    @wedding = @current_user.wedding
+    @wedding = @current_user.weddings.first
     @wedding_photo = @wedding.wedding_photos.new upload_params
 
     if @wedding_photo.save
