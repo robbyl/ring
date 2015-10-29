@@ -31,16 +31,15 @@ class WeddingsController < ApplicationController
   # POST /weddings
   def create
     @current_user = current_user
-    puts @current_user.attributes
     # @wedding = Wedding.new(wedding_params)
-    # @wedding = @current_user.wedding.new(wedding_params)
-    # if @wedding.save
-    #   @budget = Budget.new wedding_id: @wedding.id
-    #   @budget.save
-    #   redirect_to @wedding, notice: 'Wedding was successfully created.'
-    # else
-    #   render :new
-    # end
+    @wedding = @current_user.weddings.new(wedding_params)
+    if @wedding.save
+      @budget = Budget.new wedding_id: @wedding.id
+      @budget.save
+      redirect_to @wedding, notice: 'Wedding was successfully created.'
+    else
+      render :new
+    end
   end
 
   # PATCH/PUT /weddings/1
