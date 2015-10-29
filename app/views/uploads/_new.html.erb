@@ -51,7 +51,7 @@
           $('#add-files-wrapper').children().remove();
           $.ajax({
               type: "GET",
-              url: "/weddings/load_album_photos"
+              url: "/weddings/load_wedding_photos/<%= @wedding.id %>"
           });
       });
   });

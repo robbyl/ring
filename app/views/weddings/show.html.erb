@@ -24,9 +24,9 @@
       </ul>
       <div id='tab-1'>
         <div id="add-files-wrapper"></div>
-        <%= link_to '', {controller: :uploads, action: :new}, class: 'add-image', remote: true %>
+        <%= link_to '', {controller: :uploads, action: :new, id: @wedding.id}, class: 'add-image', remote: true %>
         <div id="lightgallery">
-          <%= render partial: 'weddings/wedding_photos' %>
+          <%= render partial: 'weddings/load_wedding_photos' %>
         </div>
       </div>
       <div id='tab-2'>

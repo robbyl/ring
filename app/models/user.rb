@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_one :wedding
+  has_one :wedding, dependent: :destroy
   validates_presence_of :username
   validates_uniqueness_of :username
   attr_accessor :password

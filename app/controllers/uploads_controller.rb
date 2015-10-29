@@ -12,6 +12,7 @@ class UploadsController < ApplicationController
 
   # GET /uploads/new
   def new
+    @wedding = Wedding.find params[:id]
     @upload = Upload.new
   end
 
@@ -21,7 +22,10 @@ class UploadsController < ApplicationController
 
   # POST /uploads
   def create
-    @wedding_photo = WeddingPhoto.new(upload_params)
+    @current_user = current_user
+    @wedding = @current_user.wedding
+    # @wedding_photo = WeddingPhoto.new(upload_params)
+    @wedding_photo = @wedding.wedding_photos.new upload_params
 
     if @wedding_photo.save
       # send success header

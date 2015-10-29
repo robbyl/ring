@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   resources :weddings do
     collection do
-      get 'load_album_photos'
+      get 'load_wedding_photos'
     end
   end
   resources :service_categories

@@ -135,6 +135,7 @@ ActiveRecord::Schema.define(version: 20151026120023) do
     t.string   "location",         limit: 255
     t.date     "wedding_date"
     t.integer  "guests",           limit: 4
+    t.integer  "user_id",          limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end

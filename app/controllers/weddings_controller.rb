@@ -1,5 +1,5 @@
 class WeddingsController < ApplicationController
-  before_action :set_wedding, only: [:show, :edit, :update, :destroy]
+  before_action :set_wedding, only: [:show, :edit, :update, :destroy, :load_wedding_photos]
 
   # GET /weddings
   def index
@@ -8,6 +8,7 @@ class WeddingsController < ApplicationController
 
   # GET /weddings/1
   def show
+    @wedding_photos = @wedding.wedding_photos
   end
 
   # GET /weddings/new
@@ -19,8 +20,9 @@ class WeddingsController < ApplicationController
   def edit
   end
 
-  def load_album_photos
-    @wedding_photos = Wedding.all
+  def load_wedding_photos
+    @wedding = Wedding.find params[:id]
+    @wedding_photos = @wedding.wedding_photos
     respond_to do |format|
       format.js
     end
@@ -28,15 +30,17 @@ class WeddingsController < ApplicationController
 
   # POST /weddings
   def create
-    @wedding = Wedding.new(wedding_params)
-
-    if @wedding.save
-      @budget = Budget.new wedding_id: @wedding.id
-      @budget.save
-      redirect_to @wedding, notice: 'Wedding was successfully created.'
-    else
-      render :new
-    end
+    @current_user = current_user
+    puts @current_user.attributes
+    # @wedding = Wedding.new(wedding_params)
+    # @wedding = @current_user.wedding.new(wedding_params)
+    # if @wedding.save
+    #   @budget = Budget.new wedding_id: @wedding.id
+    #   @budget.save
+    #   redirect_to @wedding, notice: 'Wedding was successfully created.'
+    # else
+    #   render :new
+    # end
   end
 
   # PATCH/PUT /weddings/1
