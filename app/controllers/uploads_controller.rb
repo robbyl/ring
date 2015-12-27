@@ -48,7 +48,7 @@ class UploadsController < ApplicationController
   # DELETE /uploads/1
   def destroy
     if @upload.destroy
-      render json: { message: "File deleted from server" }
+      render json: { message: 'File deleted from server' }
     else
       render json: { message: @upload.errors.full_messages.join(',') }
     end
